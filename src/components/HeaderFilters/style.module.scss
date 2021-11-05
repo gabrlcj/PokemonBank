@@ -1,0 +1,14 @@
+.headerIcons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  margin-bottom: 2.25rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9.5rem;
+  }
+}
