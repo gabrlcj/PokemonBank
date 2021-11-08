@@ -69,12 +69,15 @@ html {
 
 body {
   min-height: 100vh;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2.5rem;
   font: 400 1rem 'Poppins', sans-serif;
+  color: #000;
+
   background: url('assets/patterns/pokeball.svg') no-repeat;
   background-color: #fff;
   background-position: top center;
   background-size: 420px;
   background-position-y: -50%;
-
-  color: #000;
 }
