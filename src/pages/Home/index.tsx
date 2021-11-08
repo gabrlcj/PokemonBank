@@ -14,12 +14,22 @@ type PokemonResults = {
 type PokemonData = {
   id: number
   name: string
-  height: number
-  weight: number
   sprites: {
     other: {
-      home: {
+      'official-artwork': {
         front_default: string
+      }
+    }
+  }
+  types: {
+    0: {
+      type: {
+        name: string
+      }
+    }
+    1: {
+      type: {
+        name: string
       }
     }
   }
@@ -38,11 +48,10 @@ export function Home() {
     function createPokemonObject(result: PokemonResults[]) {
       result.forEach(async (pokemon) => {
         const res = await api.get(`pokemon/${pokemon.name}`)
-        setPokemonData((currentList) => [...currentList, res.data])
+        setPokemonData((prevState) => [...prevState, res.data])
       })
     }
     createPokemonObject(res.data.results)
-    await console.log(pokemonData)
   }
 
   function order(pokemonData: PokemonData[]) {
