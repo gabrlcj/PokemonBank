@@ -1,7 +1,70 @@
 .pokeCard {
   list-style: none;
+  margin: 1.45rem auto 0;
+  padding: 0 0.75rem 0 1.45rem;
+  border-radius: 1rem;
+  height: 8.25rem;
+  width: min(35rem, 100%);
 
-  .pokeImage {
-    width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & ~ .pokeCard {
+    margin: 1.5rem auto 0;
+  }
+
+  .textContainer {
+    height: inherit;
+    margin: 1rem 0 0;
+
+    .pokemonId {
+      font-weight: 700;
+      color: var(--text-number);
+    }
+
+    .pokemonName {
+      text-transform: capitalize;
+      color: var(--text-white);
+      font-size: 1.85rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .pokemonTypesContainer {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      text-transform: capitalize;
+
+      .pokemonType {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        padding: 0.25rem 0.4rem;
+        border-radius: 0.25rem;
+
+        img {
+          height: 1rem;
+          width: 1rem;
+          filter: invert(95%) sepia(0%) saturate(18%) hue-rotate(328deg)
+            brightness(104%) contrast(107%);
+        }
+
+        p {
+          font-size: 0.86rem;
+          color: var(--text-white);
+        }
+      }
+    }
+  }
+
+  .pokemonImage {
+    margin-top: -1.5rem;
+
+    .pokeImage {
+      height: 9.3rem;
+    }
   }
 }
