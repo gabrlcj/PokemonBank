@@ -44,3 +44,21 @@ p {
     }
   }
 }
+
+.loadMoreButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto 0;
+  width: 100%;
+
+  button {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 2.25rem;
+    border: 0;
+    border-radius: 1rem;
+    font: 700 1rem 'Poppins', sans-serif;
+    background: var(--bg-pressed-input);
+  }
+}
