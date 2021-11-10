@@ -1,10 +1,11 @@
-import { HeaderFilters } from '../../components/HeaderFilters'
+import { useContext } from 'react'
+import { PokemonContext } from '../../context/pokemon'
+import { PokeCards } from '../../components/PokeCards'
+import { ModalSort } from '../../components/ModalSort'
+import HeaderFilters from '../../components/HeaderFilters'
 
 import searchImg from '/assets/icons/search.svg'
 import styles from './style.module.scss'
-import { PokeCards } from '../../components/PokeCards'
-import { useContext } from 'react'
-import { PokemonContext } from '../../context/pokemon'
 
 export function Home() {
   const { pokemonData, getAllPokemon } = useContext(PokemonContext)
@@ -23,7 +24,7 @@ export function Home() {
           placeholder='What Pokémon are you looking for?'
         />
       </label>
-      {pokemonData.map((pokemon) => (
+      {pokemonData?.map((pokemon) => (
         <PokeCards key={Math.random()} pokemon={pokemon} />
       ))}
       <div className={styles.loadMoreButton}>
@@ -31,6 +32,7 @@ export function Home() {
           Load More!
         </button>
       </div>
+      <ModalSort />
     </>
   )
 }
