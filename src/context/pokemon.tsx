@@ -3,7 +3,9 @@ import { api } from '../service/api'
 
 interface PokeContext {
   pokemonData: PokemonData[]
-  getAllPokemon: () => void
+  getAllPokemon: () => Promise<void>
+  sortOpen: boolean
+  handleSortOpen: () => void
 }
 
 type PokemonData = {
@@ -42,6 +44,14 @@ type ProviderProps = {
 export const PokemonContext = createContext<PokeContext>({} as PokeContext)
 
 export function PokemonProvider({ children }: ProviderProps) {
+  const [generationOpen, setGenerationOpen] = useState(false)
+  const [sortOpen, setSortOpen] = useState(false)
+  const [filterOpen, setFilterOpen] = useState(false)
+
+  const handleGenerationOpen = () => setGenerationOpen(!generationOpen)
+  const handleSortOpen = () => setSortOpen(!sortOpen)
+  const handleFilterOpen = () => setFilterOpen(!filterOpen)
+
   const [pokemonData, setPokemonData] = useState<PokemonData[]>([])
   const [loadMore, setLoadMore] = useState(
     'https://pokeapi.co/api/v2/pokemon?limit=20'
@@ -51,14 +61,18 @@ export function PokemonProvider({ children }: ProviderProps) {
     const res = await api.get(loadMore)
     setLoadMore(res.data.next)
 
-    function createPokemonObject(result: PokemonResults[]) {
+    async function createPokemonObject(result: PokemonResults[]) {
       result.forEach(async (pokemon) => {
         const res = await api.get(`pokemon/${pokemon.name}`)
         setPokemonData((prevState) => [...prevState, res.data])
       })
     }
-    createPokemonObject(res.data.results)
+    await createPokemonObject(res.data.results)
   }
+
+  useEffect(() => {
+    getAllPokemon()
+  }, [])
 
   function order(pokemonData: PokemonData[]) {
     pokemonData.sort(function (a, b) {
@@ -68,14 +82,12 @@ export function PokemonProvider({ children }: ProviderProps) {
     })
   }
 
-  useEffect(() => {
-    getAllPokemon()
-  }, [])
-
   order(pokemonData)
 
   return (
-    <PokemonContext.Provider value={{ pokemonData, getAllPokemon }}>
+    <PokemonContext.Provider
+      value={{ pokemonData, getAllPokemon, sortOpen, handleSortOpen }}
+    >
       {children}
     </PokemonContext.Provider>
   )
