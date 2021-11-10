@@ -1,3 +1,4 @@
+import { formatPokemonId } from '../../service/formatPokemonId'
 import styles from './style.module.scss'
 
 interface PokemonData {
@@ -28,23 +29,11 @@ type PokeCardsProps = {
   pokemon: PokemonData
 }
 
-type PokemonId = Pick<PokemonData, 'id'>
-
 export function PokeCards({ pokemon }: PokeCardsProps) {
   const style = `${styles.pokeCard} ${pokemon.types[0].type.name}`
 
   const pokemonType1 = `${styles.pokemonType} ${pokemon.types[0].type.name}Type`
   const pokemonType2 = `${styles.pokemonType} ${pokemon.types[1]?.type.name}Type`
-
-  function formatPokemonId(pokemon: PokemonId) {
-    if (pokemon.id < 10) {
-      return `00${pokemon.id}`
-    } else if (pokemon.id < 100) {
-      return `0${pokemon.id}`
-    } else {
-      return pokemon.id
-    }
-  }
 
   return (
     <li className={style} key={Math.random()}>
