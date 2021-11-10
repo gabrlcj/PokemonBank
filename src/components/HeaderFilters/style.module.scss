@@ -5,10 +5,18 @@
 
   margin-bottom: 2.5rem;
 
-  div {
+  .filterButtons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 9.5rem;
+  }
+
+  button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
   }
 }

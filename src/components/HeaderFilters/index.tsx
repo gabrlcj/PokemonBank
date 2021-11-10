@@ -3,14 +3,23 @@ import sortImg from '/assets/icons/sort.svg'
 import filterImg from '/assets/icons/filter.svg'
 
 import styles from './style.module.scss'
+import { useContext } from 'react'
+import { PokemonContext } from '../../context/pokemon'
 
-export function HeaderFilters() {
+export default function HeaderFilters() {
+  const { handleSortOpen } = useContext(PokemonContext)
   return (
     <header className={styles.headerIcons}>
-      <div>
-        <img src={generationImg} alt='Generation icon' />
-        <img src={sortImg} alt='Sort icon' />
-        <img src={filterImg} alt='Filter icon' />
+      <div className={styles.filterButtons}>
+        <button type='button'>
+          <img src={generationImg} alt='Generation icon' />
+        </button>
+        <button type='button' onClick={handleSortOpen}>
+          <img src={sortImg} alt='Sort icon' />
+        </button>
+        <button type='button'>
+          <img src={filterImg} alt='Filter icon' />
+        </button>
       </div>
     </header>
   )
