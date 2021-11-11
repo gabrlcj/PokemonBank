@@ -6,6 +6,10 @@ interface PokeContext {
   getAllPokemon: () => Promise<void>
   sortOpen: boolean
   handleSortOpen: () => void
+  generationOpen: boolean
+  handleGenerationOpen: () => void
+  filterOpen: boolean
+  handleFilterOpen: () => void
 }
 
 type PokemonData = {
@@ -86,7 +90,16 @@ export function PokemonProvider({ children }: ProviderProps) {
 
   return (
     <PokemonContext.Provider
-      value={{ pokemonData, getAllPokemon, sortOpen, handleSortOpen }}
+      value={{
+        pokemonData,
+        getAllPokemon,
+        sortOpen,
+        handleSortOpen,
+        generationOpen,
+        handleGenerationOpen,
+        filterOpen,
+        handleFilterOpen,
+      }}
     >
       {children}
     </PokemonContext.Provider>
