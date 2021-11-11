@@ -1,0 +1,67 @@
+.modalContainer {
+  height: 720px;
+
+  .buttonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 8rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin-top: 2.5rem;
+
+    button,
+    &.inactive {
+      border: 0;
+      border-radius: 1rem;
+      padding: 2.15rem 1.15rem;
+      width: 100%;
+      height: 100%;
+      color: var(--text-grey);
+
+      background: var(--bg-default-input);
+      background-image: url(assets/patterns/pokeballPokeCards.svg),
+        url(assets/patterns/6x3.svg);
+      background-repeat: no-repeat;
+      background-position: right bottom, top left;
+      background-position-y: 195%, 15%;
+      background-position-x: 100%, 22%;
+      background-size: auto, 5rem;
+
+      &.active {
+        animation: BackgroundChange ease forwards 0.35s;
+      }
+    }
+  }
+}
+
+.generationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 2.75rem;
+  }
+}
+
+@keyframes BackgroundChange {
+  0% {
+    background: var(--bg-default-input);
+    color: var(--text-grey);
+  }
+
+  100% {
+    background: var(--type-psychic);
+    color: var(--text-white);
+    box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-psychic);
+    background-image: url(assets/patterns/pokeballPokeCards.svg),
+      url(assets/patterns/6x3.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom, top left;
+    background-position-y: 195%, 15%;
+    background-position-x: 100%, 22%;
+    background-size: auto, 5rem;
+  }
+}
