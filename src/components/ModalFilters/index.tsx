@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from 'react'
 import { PokemonContext } from '../../context/pokemon'
 import { useClickOutside } from '../../hooks/useClickOutside'
 import { pokemonTypes } from '../../utils/pokemonTypes'
+import { MultiRangeSlider } from '../MultiRangeSlider'
 import styles from './style.module.scss'
 
 const pokemonHeights = [{ size: 'short' }, { size: 'medium' }, { size: 'tall' }]
@@ -17,6 +18,8 @@ export function ModalFilters() {
   const [valueWeakness, setValueWeakness] = useState('')
   const [valueHeight, setValueHeight] = useState('')
   const [valueWeight, setValueWeight] = useState('')
+  const [offset, setOffset] = useState(0)
+  const [limit, setLimit] = useState(0)
 
   const ref = useRef(null)
   const handleClickOutside = () => {
@@ -145,10 +148,14 @@ export function ModalFilters() {
             ))}
           </div>
           <h3>Number Range</h3>
-          <div className={styles.inputRangeContainer}>
-            <input name='pokemonId' type='range' min='1' max='1118' />
-            <label htmlFor='pokemonId' />
-          </div>
+          <MultiRangeSlider
+            min={1}
+            max={1118}
+            onChange={({ min, max }: { min: number; max: number }) => {
+              setOffset(min)
+              setLimit(max)
+            }}
+          />
           <div className={styles.buttonContainer}>
             <button type='button'>Reset</button>
             <button type='button'>Apply</button>

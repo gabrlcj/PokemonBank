@@ -1,5 +1,5 @@
 .modalContainer {
-  height: 820px;
+  height: 840px;
 
   h3 {
     margin-top: 1.75rem;
@@ -11,13 +11,14 @@
   align-items: center;
   gap: 1rem;
 
-  height: 5rem;
+  height: 3.75rem;
+  margin-top: 0.75rem;
   overflow-x: auto;
 
   div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 3rem;
     position: relative;
     border-radius: 50%;
@@ -44,19 +45,13 @@
   }
 }
 
-.inputRangeContainer {
-  margin: 1rem 0 2.5rem;
-
-  input[type='range'] {
-    width: 100%;
-  }
-}
-
 .buttonContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  margin-top: 5rem;
 
   button {
     width: 50%;
