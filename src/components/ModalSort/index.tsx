@@ -1,24 +1,49 @@
-import { useContext, useRef } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { PokemonContext } from '../../context/pokemon'
 import { useClickOutside } from '../../hooks/useClickOutside'
+import styles from './style.module.scss'
+
+// Montar funções dentro do objeto e depois chamar no onClick do map
+const buttons = [
+  { name: 'Smallest number first' },
+  { name: 'Highest number first' },
+  { name: 'A-Z' },
+  { name: 'Z-A' },
+]
 
 export function ModalSort() {
   const { sortOpen, handleSortOpen } = useContext(PokemonContext)
-  const ref = useRef(null)
+  const [isActive, setIsActive] = useState(0)
 
+  const ref = useRef(null)
   const handleClickOutside = () => {
     handleSortOpen()
   }
-
   useClickOutside(ref, handleClickOutside)
 
   return (
-    <section className={`react-modal-overlay ${sortOpen ? 'active' : ''}`}>
+    <div className={`react-modal-overlay ${sortOpen ? 'active' : ''}`}>
       {sortOpen && (
-        <div ref={ref} className='react-modal-content'>
+        <section
+          ref={ref}
+          className={`${styles.modalContainer} react-modal-content`}
+        >
           <h2>Sort</h2>
-        </div>
+          <p>Sort Pokémon alphabetically or by National Pokédex number!</p>
+          <div className={styles.buttonContainer}>
+            {buttons.map((button, index) => (
+              <button
+                key={Math.random()}
+                type='button'
+                className={index === isActive ? styles.active : styles.inactive}
+                onClick={() => setIsActive(index)}
+              >
+                {button.name}
+              </button>
+            ))}
+          </div>
+        </section>
       )}
-    </section>
+    </div>
   )
 }
