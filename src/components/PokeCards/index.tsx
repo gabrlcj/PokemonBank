@@ -31,7 +31,6 @@ type PokeCardsProps = {
 
 export function PokeCards({ pokemon }: PokeCardsProps) {
   const style = `${styles.pokeCard} ${pokemon.types[0].type.name}`
-
   const pokemonType1 = `${styles.pokemonType} ${pokemon.types[0].type.name}Type`
   const pokemonType2 = `${styles.pokemonType} ${pokemon.types[1]?.type.name}Type`
 
