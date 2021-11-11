@@ -1,0 +1,41 @@
+.modalContainer {
+  height: 490px;
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    margin-top: 2.5rem;
+
+    button,
+    &.inactive {
+      border: 0;
+      border-radius: 1rem;
+      background: var(--bg-default-input);
+      padding: 1.5rem 2rem;
+      width: 100%;
+      height: 4rem;
+      color: var(--text-grey);
+
+      &.active {
+        animation: BackgroundChange ease forwards 0.35s;
+      }
+    }
+  }
+}
+
+@keyframes BackgroundChange {
+  0% {
+    background: var(--bg-default-input);
+    color: var(--text-grey);
+  }
+
+  100% {
+    background: var(--type-psychic);
+    color: var(--text-white);
+    box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-psychic);
+  }
+}
