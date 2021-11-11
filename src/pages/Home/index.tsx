@@ -2,11 +2,11 @@ import { useContext } from 'react'
 import { PokemonContext } from '../../context/pokemon'
 import { PokeCards } from '../../components/PokeCards'
 import { ModalSort } from '../../components/ModalSort'
+import { ModalFilters } from '../../components/ModalFilters'
 import { ModalGeneration } from '../../components/ModalGeneration'
 import HeaderFilters from '../../components/HeaderFilters'
 
 import styles from './style.module.scss'
-import { ModalFilters } from '../../components/ModalFilters'
 
 export function Home() {
   const { pokemonData, getAllPokemon } = useContext(PokemonContext)
