@@ -1,4 +1,4 @@
-import { formatPokemonId } from '../../service/formatPokemonId'
+import { formatPokemonId } from '../../utils/formatPokemonId'
 import styles from './style.module.scss'
 
 interface PokemonData {
