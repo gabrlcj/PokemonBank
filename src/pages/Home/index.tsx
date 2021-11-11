@@ -2,10 +2,11 @@ import { useContext } from 'react'
 import { PokemonContext } from '../../context/pokemon'
 import { PokeCards } from '../../components/PokeCards'
 import { ModalSort } from '../../components/ModalSort'
+import { ModalGeneration } from '../../components/ModalGeneration'
 import HeaderFilters from '../../components/HeaderFilters'
 
-import searchImg from '/assets/icons/search.svg'
 import styles from './style.module.scss'
+import { ModalFilters } from '../../components/ModalFilters'
 
 export function Home() {
   const { pokemonData, getAllPokemon } = useContext(PokemonContext)
@@ -15,8 +16,7 @@ export function Home() {
       <HeaderFilters />
       <h1>Pokémon Bank</h1>
       <p>Search for Pokémon by name or using the National Pokédex number.</p>
-      <label className={styles.searchContainer} htmlFor='search'>
-        <img src={searchImg} alt='Search icon' />
+      <label htmlFor='search'>
         <input
           className={styles.searchInput}
           type='search'
@@ -24,15 +24,19 @@ export function Home() {
           placeholder='What Pokémon are you looking for?'
         />
       </label>
-      {pokemonData?.map((pokemon) => (
-        <PokeCards key={Math.random()} pokemon={pokemon} />
-      ))}
+      <ul>
+        {pokemonData?.map((pokemon) => (
+          <PokeCards key={Math.random()} pokemon={pokemon} />
+        ))}
+      </ul>
       <div className={styles.loadMoreButton}>
         <button type='button' onClick={() => getAllPokemon()}>
           Load More!
         </button>
       </div>
       <ModalSort />
+      <ModalGeneration />
+      <ModalFilters />
     </>
   )
 }
