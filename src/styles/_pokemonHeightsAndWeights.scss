@@ -1,0 +1,86 @@
+// Height dos Pokémon-------------------------------------------------------------
+.shortHeight {
+  background-color: var(--height-short);
+}
+
+.mediumHeight {
+  background-color: var(--height-medium);
+}
+
+.tallHeight {
+  background-color: var(--height-tall);
+}
+
+.shortHeightIcon {
+  filter: invert(77%) sepia(25%) saturate(6638%) hue-rotate(295deg)
+    brightness(550%) contrast(102%);
+}
+
+.mediumHeightIcon {
+  filter: invert(73%) sepia(10%) saturate(1235%) hue-rotate(186deg)
+    brightness(281%) contrast(84%);
+}
+
+.tallHeightIcon {
+  filter: invert(76%) sepia(16%) saturate(166%) hue-rotate(194deg)
+    brightness(301%) contrast(84%);
+}
+
+.shortTypeFilter {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(107%)
+    contrast(102%);
+}
+
+.mediumTypeFilter {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(107%)
+    contrast(102%);
+}
+
+.tallTypeFilter {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(107%)
+    contrast(102%);
+}
+
+// Weight dos Pokémon-------------------------------------------------------------
+
+.lightWeight {
+  background-color: var(--weight-light);
+}
+
+.normalWeight {
+  background-color: var(--weight-normal);
+}
+
+.heavyWeight {
+  background-color: var(--weight-heavy);
+}
+
+.lightWeightIcon {
+  filter: invert(21%) sepia(34%) saturate(453%) hue-rotate(51deg)
+    brightness(95%) contrast(88%);
+}
+
+.normalWeightIcon {
+  filter: invert(34%) sepia(51%) saturate(484%) hue-rotate(156deg)
+    brightness(93%) contrast(85%);
+}
+
+.heavyWeightIcon {
+  filter: invert(30%) sepia(11%) saturate(1421%) hue-rotate(149deg)
+    brightness(77%) contrast(87%);
+}
+
+.lightTypeFilter {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(107%)
+    contrast(102%);
+}
+
+.normalTypeFilter {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(107%)
+    contrast(102%);
+}
+
+.heavyTypeFilter {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(107%)
+    contrast(102%);
+}

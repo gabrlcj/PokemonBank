@@ -1,54 +1,163 @@
 .bugType {
   background-color: var(--type-bug);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-bug);
 }
 .darkType {
   background-color: var(--type-dark);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-dark);
 }
 .dragonType {
   background-color: var(--type-dragon);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-dragon);
 }
 .electricType {
   background-color: var(--type-electric);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-electric);
 }
 .fairyType {
   background-color: var(--type-fairy);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-fairy);
 }
 .fightingType {
   background-color: var(--type-fighting);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-fighting);
 }
 .fireType {
   background-color: var(--type-fire);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-fire);
 }
 .flyingType {
   background-color: var(--type-flying);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-flying);
 }
 .ghostType {
   background-color: var(--type-ghost);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-ghost);
 }
 .grassType {
   background-color: var(--type-grass);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-grass);
 }
 .groundType {
   background-color: var(--type-ground);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-ground);
 }
 .iceType {
   background-color: var(--type-ice);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-ice);
 }
 .normalType {
   background-color: var(--type-normal);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-normal);
 }
 .poisonType {
   background-color: var(--type-poison);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-poison);
 }
 .psychicType {
   background-color: var(--type-psychic);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-psychic);
 }
 .rockType {
   background-color: var(--type-rock);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-rock);
 }
 .steelType {
   background-color: var(--type-steel);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-steel);
 }
 .waterType {
   background-color: var(--type-water);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-water);
+}
+
+.bugIcon {
+  filter: invert(57%) sepia(97%) saturate(319%) hue-rotate(36deg)
+    brightness(140%) contrast(87%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.darkIcon {
+  filter: invert(34%) sepia(6%) saturate(492%) hue-rotate(208deg)
+    brightness(75%) contrast(90%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.dragonIcon {
+  filter: invert(28%) sepia(81%) saturate(5471%) hue-rotate(198deg)
+    brightness(102%) contrast(88%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.electricIcon {
+  filter: invert(80%) sepia(20%) saturate(5036%) hue-rotate(360deg)
+    brightness(480%) contrast(91%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.fairyIcon {
+  filter: invert(69%) sepia(41%) saturate(3017%) hue-rotate(284deg)
+    brightness(97%) contrast(92%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.fightingIcon {
+  filter: invert(55%) sepia(77%) saturate(4328%) hue-rotate(317deg)
+    brightness(93%) contrast(98%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.fireIcon {
+  filter: invert(53%) sepia(81%) saturate(1604%) hue-rotate(344deg)
+    brightness(102%) contrast(98%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.flyingIcon {
+  filter: invert(67%) sepia(9%) saturate(1958%) hue-rotate(184deg)
+    brightness(162%) contrast(90%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.ghostIcon {
+  filter: invert(37%) sepia(84%) saturate(321%) hue-rotate(188deg)
+    brightness(95%) contrast(95%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.grassIcon {
+  filter: invert(59%) sepia(69%) saturate(351%) hue-rotate(66deg)
+    brightness(144%) contrast(89%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.groundIcon {
+  filter: invert(59%) sepia(29%) saturate(996%) hue-rotate(333deg)
+    brightness(108%) contrast(96%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.iceIcon {
+  filter: invert(15%) sepia(36%) saturate(466%) hue-rotate(123deg)
+    brightness(90%) contrast(95%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.normalIcon {
+  filter: invert(35%) sepia(10%) saturate(246%) hue-rotate(189deg)
+    brightness(99%) contrast(81%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.poisonIcon {
+  filter: invert(45%) sepia(22%) saturate(2916%) hue-rotate(246deg)
+    brightness(84%) contrast(87%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.psychicIcon {
+  filter: invert(49%) sepia(24%) saturate(1273%) hue-rotate(308deg)
+    brightness(93%) contrast(101%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.rockIcon {
+  filter: invert(20%) sepia(8%) saturate(1125%) hue-rotate(6deg) brightness(86%)
+    contrast(85%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.steelIcon {
+  filter: invert(62%) sepia(53%) saturate(372%) hue-rotate(155deg)
+    brightness(95%) contrast(101%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
+}
+.waterIcon {
+  filter: invert(49%) sepia(89%) saturate(778%) hue-rotate(187deg)
+    brightness(91%) contrast(86%);
+  box-shadow: 0 0.25rem 1.4rem -0.35rem var(--type-);
 }
