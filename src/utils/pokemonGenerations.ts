@@ -1,6 +1,7 @@
 export const pokemonGenerations = [
   {
     generation: {
+      id: 1,
       name: 'generation1',
       title: 'Generation I',
       starters: {
@@ -12,6 +13,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 2,
       name: 'generation2',
       title: 'Generation II',
       starters: {
@@ -23,6 +25,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 3,
       name: 'generation3',
       title: 'Generation III',
       starters: {
@@ -34,6 +37,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 4,
       name: 'generation4',
       title: 'Generation IV',
       starters: {
@@ -45,6 +49,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 5,
       name: 'generation5',
       title: 'Generation V',
       starters: {
@@ -56,6 +61,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 6,
       name: 'generation6',
       title: 'Generation VI',
       starters: {
@@ -67,6 +73,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 7,
       name: 'generation7',
       title: 'Generation VII',
       starters: {
@@ -78,6 +85,7 @@ export const pokemonGenerations = [
   },
   {
     generation: {
+      id: 8,
       name: 'generation8',
       title: 'Generation VII',
       starters: {
