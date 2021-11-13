@@ -1,17 +1,6 @@
 import { createContext, useEffect, useState, ReactNode } from 'react'
 import { api } from '../service/api'
 
-interface PokeContext {
-  pokemonData: PokemonData[]
-  getAllPokemon: () => Promise<void>
-  sortOpen: boolean
-  handleSortOpen: () => void
-  generationOpen: boolean
-  handleGenerationOpen: () => void
-  filterOpen: boolean
-  handleFilterOpen: () => void
-}
-
 type PokemonData = {
   id: number
   name: string
@@ -36,6 +25,19 @@ type PokemonData = {
   }
 }
 
+type PokeContext = {
+  pokemonData: PokemonData[]
+  getAllPokemon: () => Promise<void>
+  sortOpen: boolean
+  handleSortOpen: () => void
+  generationOpen: boolean
+  handleGenerationOpen: () => void
+  filterOpen: boolean
+  handleFilterOpen: () => void
+}
+
+export const PokemonContext = createContext<PokeContext>({} as PokeContext)
+
 type PokemonResults = {
   name: string
   url: string
@@ -44,8 +46,6 @@ type PokemonResults = {
 type ProviderProps = {
   children: ReactNode
 }
-
-export const PokemonContext = createContext<PokeContext>({} as PokeContext)
 
 export function PokemonProvider({ children }: ProviderProps) {
   const [generationOpen, setGenerationOpen] = useState(false)
@@ -61,25 +61,25 @@ export function PokemonProvider({ children }: ProviderProps) {
     'https://pokeapi.co/api/v2/pokemon?limit=20'
   )
 
+  useEffect(() => {
+    getAllPokemon()
+  }, [])
+
   const getAllPokemon = async () => {
     const res = await api.get(loadMore)
     setLoadMore(res.data.next)
 
-    async function createPokemonObject(result: PokemonResults[]) {
+    function createPokemonObject(result: PokemonResults[]) {
       result.forEach(async (pokemon) => {
         const res = await api.get(`pokemon/${pokemon.name}`)
         setPokemonData((prevState) => [...prevState, res.data])
       })
     }
-    await createPokemonObject(res.data.results)
+    createPokemonObject(res.data.results)
   }
 
-  useEffect(() => {
-    getAllPokemon()
-  }, [])
-
   function order(pokemonData: PokemonData[]) {
-    pokemonData.sort(function (a, b) {
+    pokemonData?.sort(function (a, b) {
       if (a.id > b.id) return 1
       if (a.id < b.id) return -1
       return 0
