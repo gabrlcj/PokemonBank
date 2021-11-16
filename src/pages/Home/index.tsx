@@ -12,7 +12,7 @@ export function Home() {
   const { getAllPokemon } = useContext(PokemonContext)
 
   return (
-    <>
+    <main>
       <HeaderFilters />
       <h1>Pokémon Bank</h1>
       <p>Search for Pokémon by name or using the National Pokédex number.</p>
@@ -34,6 +34,6 @@ export function Home() {
       <ModalSort />
       <ModalGeneration />
       <ModalFilters />
-    </>
+    </main>
   )
 }
