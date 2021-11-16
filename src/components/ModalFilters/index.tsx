@@ -27,6 +27,13 @@ export function ModalFilters() {
   }
   useClickOutside(ref, handleClickOutside)
 
+  const handleResetFilters = () => {
+    setValueType('')
+    setValueWeakness('')
+    setValueHeight('')
+    setValueWeight('')
+  }
+
   return (
     <div className={`react-modal-overlay ${filterOpen ? 'active' : ''}`}>
       {filterOpen && (
@@ -157,7 +164,9 @@ export function ModalFilters() {
             }}
           />
           <div className={styles.buttonContainer}>
-            <button type='button'>Reset</button>
+            <button type='button' onClick={handleResetFilters}>
+              Reset
+            </button>
             <button type='button'>Apply</button>
           </div>
         </section>
