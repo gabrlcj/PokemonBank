@@ -5,15 +5,15 @@
 ## 🌎 Navegação
 <details open>
   <summary>Navegação para as secções</summary>
-      - <a href="-sobre">📝 Sobre</a>
+  <a href="#-sobre">📝 Sobre</a>
   <br/>
-    - <a href="-imagens">📸 Imagens</a>
+  <a href="#-imagens">📸 Imagens</a>
   <br/>
-    - <a href="-funcionalidades">💻 Funcionalidades</a>
+  <a href="#-funcionalidades">💻 Funcionalidades</a>
   <br/>
-    - <a href="-tecnologias">🧰 Tecnologias</a>
+  <a href="#-tecnologias">🧰 Tecnologias</a>
   <br/>
-    - <a href="-autor">👤 Autor</a>
+  <a href="#-autor">👤 Autor</a>
 </details>
 
 <br/>
@@ -70,4 +70,4 @@ Com esse projeto pude me aprofundar em conhecimentos como:
 
 <br/>
 
-### <a href="-navegaçao">⬆ Voltar para o topo</a>
+### <a href="#-navegação">⬆ Voltar para o topo</a>
