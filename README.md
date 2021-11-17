@@ -24,8 +24,8 @@ Com esse projeto pude me aprofundar em conhecimentos como:
 </div>
 <h3 align="center">Versão Mobile</h3>
 <div align="center">
-  <img src="public/github-imgs/home-mobile.png" height=49% />
-  <img src="public/github-imgs/pokemon-details-mobile.png" height=49% />
+  <img src="public/github-imgs/home-mobile.png" height=49% width=49% />
+  <img src="public/github-imgs/pokemon-details-mobile.png" height=49% width=49% />
 </div>
 
 ## 🧰 Tecnologias
