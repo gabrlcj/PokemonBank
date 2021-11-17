@@ -19,13 +19,13 @@ Com esse projeto pude me aprofundar em conhecimentos como:
 ## 📸 Imagens
 <h3 align="center">Versão Web</h3>
 <div align="center">
-  <img src="github-imgs/home.png" width=49% />
-  <img src="github-imgs/pokemon-details.png" width=49% />
+  <img src="public/github-imgs/home.png" width=49% />
+  <img src="public/github-imgs/pokemon-details.png" width=49% />
 </div>
 <h3 align="center">Versão Mobile</h3>
 <div align="center">
-  <img src="github-imgs/home-mobile.png" height=49% />
-  <img src="github-imgs/pokemon-details-mobile.png" height=49% />
+  <img src="public/github-imgs/home-mobile.png" height=49% />
+  <img src="public/github-imgs/pokemon-details-mobile.png" height=49% />
 </div>
 
 ## 🧰 Tecnologias
