@@ -1,3 +1,13 @@
+ul {
+  @media (min-width: 1080px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 600px));
+    grid-auto-rows: 150px;
+    grid-auto-flow: row;
+    column-gap: 1rem;
+  }
+}
+
 .pokeCard {
   list-style: none;
   margin: 1.8rem auto 0;
