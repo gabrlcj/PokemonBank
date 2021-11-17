@@ -55,8 +55,8 @@ Com esse projeto pude me aprofundar em conhecimentos como:
   - [x] Input de procura totalmente funcional para os 1118 Pokémon
   - [x] Ao clicar em um dos cards redireciona para uma visualização única daquele card
   - [x] UI completa
-  - [] Filtragem para as informações dos Pokémon
-  - [] Scroll infinito
+  - [ ] Filtragem para as informações dos Pokémon
+  - [ ] Scroll infinito
 
 ## 🧰 Tecnologias
 <div>
