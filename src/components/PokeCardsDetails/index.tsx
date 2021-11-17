@@ -73,20 +73,22 @@ export function PokeCardsDetails({ pokemonDetails }: PokeCardsDetailsProps) {
                 />
                 <p>{pokemon.types[0].type.name}</p>
               </div>
-              <div
-                className={`${styles.pokemonType} ${pokemon.types[1]?.type.name}Type`}
-              >
-                <img
-                  src={
-                    pokemon.types[1]?.type.name
-                      ? `/assets/pkm-types/${pokemon.types[1]?.type.name}.svg`
-                      : ''
-                  }
-                  alt={pokemon.types[1]?.type.name}
-                  title={pokemon.types[1]?.type.name}
-                />
-                <p>{pokemon.types[1]?.type.name}</p>
-              </div>
+              {pokemon.types[1]?.type.name && (
+                <div
+                  className={`${styles.pokemonType} ${pokemon.types[1]?.type.name}Type`}
+                >
+                  <img
+                    src={
+                      pokemon.types[1]?.type.name
+                        ? `/assets/pkm-types/${pokemon.types[1]?.type.name}.svg`
+                        : ''
+                    }
+                    alt={pokemon.types[1]?.type.name}
+                    title={pokemon.types[1]?.type.name}
+                  />
+                  <p>{pokemon.types[1]?.type.name}</p>
+                </div>
+              )}
             </div>
           </div>
           <div className={styles.pokemonImage}>
@@ -96,6 +98,10 @@ export function PokeCardsDetails({ pokemonDetails }: PokeCardsDetailsProps) {
               alt={pokemon.name}
               title={pokemon.name.toUpperCase()}
             />
+          </div>
+          <div className={styles.pokemonMeasure}>
+            <h3 className={styles.pokemonName}>Weight: {pokemon.weight}</h3>
+            <h3 className={styles.pokemonName}>Height: {pokemon.height}</h3>
           </div>
         </li>
       ))}
