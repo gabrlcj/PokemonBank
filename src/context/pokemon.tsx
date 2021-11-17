@@ -58,7 +58,7 @@ export function PokemonProvider({ children }: ProviderProps) {
 
   const [pokemonData, setPokemonData] = useState<PokemonData[]>([])
   const [loadMore, setLoadMore] = useState(
-    'https://pokeapi.co/api/v2/pokemon?limit=20'
+    'https://pokeapi.co/api/v2/pokemon?limit=50'
   )
 
   useEffect(() => {
