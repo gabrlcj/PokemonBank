@@ -34,6 +34,7 @@ type PokeContext = {
   handleGenerationOpen: () => void
   filterOpen: boolean
   handleFilterOpen: () => void
+  loading: boolean
 }
 
 export const PokemonContext = createContext<PokeContext>({} as PokeContext)
@@ -51,6 +52,7 @@ export function PokemonProvider({ children }: ProviderProps) {
   const [generationOpen, setGenerationOpen] = useState(false)
   const [sortOpen, setSortOpen] = useState(false)
   const [filterOpen, setFilterOpen] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handleGenerationOpen = () => setGenerationOpen(!generationOpen)
   const handleSortOpen = () => setSortOpen(!sortOpen)
@@ -66,6 +68,7 @@ export function PokemonProvider({ children }: ProviderProps) {
   }, [])
 
   const getAllPokemon = async () => {
+    setLoading(true)
     const res = await api.get(loadMore)
     setLoadMore(res.data.next)
 
@@ -76,6 +79,7 @@ export function PokemonProvider({ children }: ProviderProps) {
       })
     }
     createPokemonObject(res.data.results)
+    setLoading(false)
   }
 
   function order(pokemonData: PokemonData[]) {
@@ -99,6 +103,7 @@ export function PokemonProvider({ children }: ProviderProps) {
         handleGenerationOpen,
         filterOpen,
         handleFilterOpen,
+        loading,
       }}
     >
       {children}

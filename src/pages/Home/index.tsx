@@ -9,9 +9,10 @@ import HeaderFilters from '../../components/HeaderFilters'
 
 import styles from './style.module.scss'
 import { api } from '../../service/api'
+import { Loading } from '../../components/Loading'
 
 export function Home() {
-  const { pokemonData, getAllPokemon } = useContext(PokemonContext)
+  const { pokemonData, getAllPokemon, loading } = useContext(PokemonContext)
   const [search, setSearch] = useState('')
   const navigate = useNavigate()
 
@@ -44,7 +45,7 @@ export function Home() {
       <PokeCards pokemonData={pokemonData} />
       <div className={styles.loadMoreButton}>
         <button type='button' onClick={() => getAllPokemon()}>
-          Load More!
+          {loading ? <Loading /> : 'Load More!'}
         </button>
       </div>
       <ModalSort />
