@@ -5,6 +5,7 @@
 ## 🌎 Navegação
 <details open>
   <summary>Navegação para as secções</summary>
+  <br/>
   <a href="#-sobre">📝 Sobre</a>
   <br/>
   <a href="#-imagens">📸 Imagens</a>
