@@ -13,17 +13,19 @@
 }
 
 html {
-  background: url(assets/patterns/pokeballBody.svg) no-repeat;
+  background: url(/assets/patterns/pokeballBody.svg) no-repeat;
   background-position: top center;
   background-size: 420px;
-  background-position-y: -8%;
+  background-position-y: -5.5%;
 
   @media (max-width: 1080px) {
     font-size: 93.75%;
+    background-position-y: -2.75%;
   }
 
   @media (max-width: 680px) {
     font-size: 87.5%;
+    background-position-y: -2.75%;
   }
 }
 
