@@ -3,7 +3,6 @@ import { PokemonContext } from '../../context/pokemon'
 import { useClickOutside } from '../../hooks/useClickOutside'
 import styles from './style.module.scss'
 
-// Montar funções dentro do objeto e depois chamar no onClick do map
 const buttons = [
   { name: 'Smallest number first' },
   { name: 'Highest number first' },
