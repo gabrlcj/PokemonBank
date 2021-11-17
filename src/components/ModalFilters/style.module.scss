@@ -11,9 +11,13 @@
   align-items: center;
   gap: 1rem;
 
-  height: 3.75rem;
+  height: 4.5rem;
   margin-top: 0.75rem;
   overflow-x: auto;
+
+  @media (min-width: 1080px) {
+    height: 3rem;
+  }
 
   div {
     display: flex;
