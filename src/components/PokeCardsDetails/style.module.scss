@@ -8,8 +8,9 @@
 
   display: flex;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
+  gap: 0.5rem;
 
   .textContainer {
     display: flex;
@@ -21,7 +22,6 @@
     .pokemonId {
       font-weight: 700;
       color: var(--text-number);
-      margin-top: 10rem;
     }
 
     .pokemonName {
@@ -73,5 +73,15 @@
       margin: 0 auto;
       height: 20rem;
     }
+  }
+
+  .pokemonMeasure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    margin: 2rem auto 0;
+    color: var(--text-white);
   }
 }
