@@ -49,14 +49,14 @@ Com esse projeto pude me aprofundar em conhecimentos como:
 </div>
 
 ## 💻 Funcionalidades
-  [x] Responsividade Web/Mobile
-  [x] Listagem dos 50 primeiros Pokémon na Home Page
-  [x] Botão para carregamento de mais 50 Pokémon ao final da Page
-  [x] Input de procura totalmente funcional para os 1118 Pokémon
-  [x] Ao clicar em um dos cards redireciona para uma visualização única daquele card
-  [x] UI completa
-  [ ] Filtragem para as informações dos Pokémon
-  [ ] Scroll infinito
+  - [x] Responsividade Web/Mobile
+  - [x] Listagem dos 50 primeiros Pokémon na Home Page
+  - [x] Botão para carregamento de mais 50 Pokémon ao final da Page
+  - [x] Input de procura totalmente funcional para os 1118 Pokémon
+  - [x] Ao clicar em um dos cards redireciona para uma visualização única daquele card
+  - [x] UI completa
+  - [] Filtragem para as informações dos Pokémon
+  - [] Scroll infinito
 
 ## 🧰 Tecnologias
 <div>
