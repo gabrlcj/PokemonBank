@@ -1,12 +1,36 @@
-import { useContext } from 'react'
-import { PokemonContext } from '../../context/pokemon'
 import { formatPokemonId } from '../../utils/formatPokemonId'
 import { Link } from 'react-router-dom'
 import styles from './style.module.scss'
 
-export function PokeCards() {
-  const { pokemonData } = useContext(PokemonContext)
+type PokemonData = {
+  id: number
+  name: string
+  sprites: {
+    other: {
+      'official-artwork': {
+        front_default: string
+      }
+    }
+  }
+  types: {
+    0: {
+      type: {
+        name: string
+      }
+    }
+    1: {
+      type: {
+        name: string
+      }
+    }
+  }
+}
 
+type PokemonCardsProps = {
+  pokemonData: PokemonData[]
+}
+
+export function PokeCards({ pokemonData }: PokemonCardsProps) {
   if (pokemonData === undefined)
     return <h1>Something went wrong, please reload the page</h1>
 
@@ -39,20 +63,22 @@ export function PokeCards() {
                   />
                   <p>{pokemon.types[0].type.name}</p>
                 </div>
-                <div
-                  className={`${styles.pokemonType} ${pokemon.types[1]?.type.name}Type`}
-                >
-                  <img
-                    src={
-                      pokemon.types[1]?.type.name
-                        ? `assets/pkm-types/${pokemon.types[1]?.type.name}.svg`
-                        : ''
-                    }
-                    alt={pokemon.types[1]?.type.name}
-                    title={pokemon.types[1]?.type.name}
-                  />
-                  <p>{pokemon.types[1]?.type.name}</p>
-                </div>
+                {pokemon.types[1]?.type.name && (
+                  <div
+                    className={`${styles.pokemonType} ${pokemon.types[1]?.type.name}Type`}
+                  >
+                    <img
+                      src={
+                        pokemon.types[1]?.type.name
+                          ? `assets/pkm-types/${pokemon.types[1]?.type.name}.svg`
+                          : ''
+                      }
+                      alt={pokemon.types[1]?.type.name}
+                      title={pokemon.types[1]?.type.name}
+                    />
+                    <p>{pokemon.types[1]?.type.name}</p>
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.pokemonImage}>
