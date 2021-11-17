@@ -63,8 +63,6 @@ export function PokemonAbout() {
     handlePokemonAbout()
   }, [name])
 
-  if (!pokemon) return
-
   return (
     <section>
       {loading ? (
