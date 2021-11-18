@@ -34,7 +34,7 @@ Com esse projeto pude me aprofundar em conhecimentos como:
   - `Vite` como ferramenta de build do projeto
   - Criação do projeto utilizando o método `Mobile First`
 
-*Nem todas as funcionalidades estão com seu funcionamento 100%, acabei finalizando as partes que consegui no momento*
+*OBS: Nem todas as funcionalidades estão com seu funcionamento 100%, acabei finalizando as partes que consegui no momento*
 
 ## 📸 Imagens
 <h3 align="center">Versão Web</h3>
