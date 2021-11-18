@@ -99,6 +99,22 @@ export function PokeCardsDetails({ pokemonDetails }: PokeCardsDetailsProps) {
               title={pokemon.name.toUpperCase()}
             />
           </div>
+          <div className={styles.pokemonAbilities}>
+            <h3 className={styles.pokemonName}>Pokémon Abilities</h3>
+            <strong>1. {pokemon.abilities[0].ability.name}</strong>
+            <div className={styles.pokemonHiddenAbility}>
+              {pokemon.abilities[1]?.ability.name ? (
+                <>
+                  <strong>2. {pokemon.abilities[1]?.ability.name}</strong>
+                  <small className={styles.pokemonId}>
+                    {pokemon.abilities[1]?.is_hidden ? 'Hidden ability' : ''}
+                  </small>
+                </>
+              ) : (
+                ''
+              )}
+            </div>
+          </div>
           <div className={styles.pokemonMeasure}>
             <h3 className={styles.pokemonName}>
               Weight: {`${pokemon.weight} lbs`}
