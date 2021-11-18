@@ -100,8 +100,12 @@ export function PokeCardsDetails({ pokemonDetails }: PokeCardsDetailsProps) {
             />
           </div>
           <div className={styles.pokemonMeasure}>
-            <h3 className={styles.pokemonName}>Weight: {pokemon.weight}</h3>
-            <h3 className={styles.pokemonName}>Height: {pokemon.height}</h3>
+            <h3 className={styles.pokemonName}>
+              Weight: {`${pokemon.weight} lbs`}
+            </h3>
+            <h3 className={styles.pokemonName}>
+              Height: {`${pokemon.height} ft`}
+            </h3>
           </div>
         </li>
       ))}
